@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int temp[31];
+
+    for (int i = 0; i < 31; i++)
+        cin >> temp[i];
+
+    int x;
+    cin >> x;
+
+    int *p = temp;
+
+    for (int i = 0; i < 31; i++) {
+        if (*(p + i) < x) {
+            cout << i + 1;
+            return 0;
+        }
+    }
+
+    cout << "No such day";
+}
