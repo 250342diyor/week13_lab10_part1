@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int *p1,*p2,*p3,i,j,sum=0;
+    cout<<"Please enter 2 numbers(less than 100, first number should be less than or equal to first): ";
+    do{
+        cin>>i>>j;
+    }while(i>j||i>=100||j>=100);
+    p1=&i;
+    p2=&j;
+    p3=&sum;
+    for (int x=*p1+1;x<*p2;x++) {
+        *p3+=x;
+    }
+    cout<<"sum: "<<*p3<<endl;
+}
