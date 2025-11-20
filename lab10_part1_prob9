@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    int *p1 = &a;
+    int *p2 = &b;
+    int *p3 = &c;
+
+    int minVal = *p1;
+    if (*p2 < minVal) minVal = *p2;
+    if (*p3 < minVal) minVal = *p3;
+
+    cout << minVal;
+
+    return 0;
+}
