@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a,b,c,max_num;
+    cout<<"Enter three numbers: ";
+    cin>>a>>b>>c;
+    int *ptrA = &a, *ptrB = &b, *ptrC = &c;
+    if (*ptrA > *ptrB && *ptrA > *ptrC) {
+        max_num = *ptrA;
+    }else if (*ptrB > *ptrA && *ptrB > *ptrC) {
+        max_num = *ptrB;
+    }else{
+        max_num = *ptrC;
+    }
+}
